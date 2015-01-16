@@ -1,0 +1,9 @@
+extends layout
+
+block content
+	div(ng-controller="DashboardCtrl")
+		.container
+			h1 Dashboard
+	.preview__area
+		div(id="canvas" style="position: absolute;position: absolute;width: 100%;height: 100%;z-index: 100;")
+		preview(id="#{id}" url="#{url}" account="#{account}")

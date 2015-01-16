@@ -1,0 +1,28 @@
+.preview__area {
+    position: relative;
+    width: 100%;
+
+    preview {
+        display: block;
+        text-align: center;
+    }
+
+    img {
+        text-align: center;
+        display: inline-block;
+        margin: 0 auto;
+        max-width: initial;
+    }
+
+    svg {
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+.click--map {
+    position: absolute;
+    background: red;
+    width: 10px;
+    height: 10px;
+}

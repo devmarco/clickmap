@@ -1,0 +1,20 @@
+#!/usr/bin/env node
+var debug = require('debug')('my-application');
+var app = require('../../app');
+var server = require('http').Server(app);
+var io = require('socket.io')(server);
+
+app.set('port', process.env.PORT || 3000);
+
+server.listen(app.get('port'), function() {
+  debug('Express server listening on port ' + server.address().port);
+});
+
+io.on('connection', function(socket) {
+    socket.on('connected', function(data) {
+        io.emit('screenSize', data);
+    });
+    socket.on('click', function(data) {
+        io.emit('clicked', data);
+    });
+});

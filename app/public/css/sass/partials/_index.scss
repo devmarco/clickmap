@@ -1,0 +1,68 @@
+.main__bx {
+	//background: url('http://charactersf.com/assets/uploads/2014/05/wally_packaging_set_4.jpg') no-repeat center;
+	background: #fff;
+	height: 100%;
+}
+
+.account__add {
+	max-width: 400px;
+	margin-top: 50px;
+	position: relative;
+
+	.title {
+		margin-bottom: 20px;
+		text-transform: uppercase;
+
+		@extend %f-bold;
+		@extend %f16;
+	}
+
+	.field {
+		margin-bottom: 20px;
+	}
+
+	label {
+		display: block;
+		margin-bottom: 5px;
+		font-weight: 600;
+
+		@extend %f-regular;
+		@extend %f14;
+	}
+
+	button {
+		width: initial;
+		position: absolute;
+		top: 79px;
+		right: -110px;
+		width: 100px;
+		height: 100px;
+
+		@include vendor(border-radius, 50%);
+
+		&:focus, &:active {
+			outline: none;
+		}
+	}
+}
+
+.account__list {
+	max-width: 400px;
+	margin-top: 50px;
+	position: relative;
+
+	ul {
+		margin: 20px 0 0 0;
+		padding: 0;
+		list-style: none;
+	}
+	li {
+		margin: 3px 0;
+	}
+	a {
+		color: #454545;
+
+		@extend %f-regular;
+		@extend %f16;
+	}
+}

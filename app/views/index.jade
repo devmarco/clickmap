@@ -1,0 +1,25 @@
+extends layout
+
+block content
+	div(ng-controller="HomeCtrl" class="main__bx")
+		.container
+			.row
+				.col-sm-5
+					div.account__add
+						h2.title Adicionar conta
+
+						form
+							.field
+								label Nome da conta
+								input(type="text" placeholder="Nome da conta" class="js-account-name")
+							.field
+								label URL que deseja monitorar
+								input(type="text" placeholder="Url" class="js-account-url")
+							.field
+								button(type="button" class="btn btn-primary" ng-click="saveAccount()") Adicionar
+				.col-sm-4.col-sm-offset-3
+					div.account__list
+						h2.title Contas cadastradas
+						ul
+							li(ng-repeat="acc in accounts")
+								a(href="/dashboard/{{ acc._id }}") {{ acc.name }}
